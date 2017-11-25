@@ -1,0 +1,52 @@
+<!-- extends layout
+
+block content
+    h1.
+        Patient List
+
+    table
+     thead
+        tr
+          th name
+          th age
+          th gender
+     tbody
+      each patient, i in patientlist
+          
+        tr
+          td=patient.p_name
+          td=patient.age
+          td=patient.gender
+          
+    a(href="/")
+        button(type="button") BackToHome -->
+
+
+ 
+  <h1>Patient List</h1>
+  <table>
+    <th>
+      <tr>
+        <th>
+          NAME
+        </th>
+        <th>
+          AGE
+        </th>
+        <th>
+          GENDER
+        </th>
+      </tr>
+    </th>
+    <tbody>
+        <tr ng-repeat="patient in patientlist" ng-controller="">
+         {{each patient, i in patientlist}} 
+          {{5+5}}
+          <td>patient.p_name</td>
+          <td>patient.age</td>
+          <td>patient.gender</td>
+        </tr>
+        {{/each}}
+    </tbody>
+  </table>
+  
