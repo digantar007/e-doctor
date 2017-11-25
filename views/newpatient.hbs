@@ -1,0 +1,44 @@
+
+    <!-- h1= title
+    form#formAddUser(name="adduser",method="post",action="/addp")
+        input#inputPatientName(type="text", placeholder="Patientname", name="pname")
+        br
+        br
+        br
+        input#inputPatientAge(type="text", placeholder="Patientage", name="page")
+        br
+        br
+        br
+        input#inputPatientGender(type="radio", name="pgender", value="male" checked)
+        | Male
+        input#inputPatientGender(type="radio", name="pgender", value="female")
+        | Female
+        br
+        br
+        button#btnSubmit(type="submit") Submit
+        &nbsp;
+        &nbsp;
+
+        a(href="/")
+               button(type="button") Back-To-Home -->
+
+    <div class="container">
+   <form name="AddPatient" action="/addp" method="post">
+  <div class="form-group">
+    <input type="text" class="form-control" name="pname" placeholder="patient name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="page" placeholder="Age">
+  </div>
+  <div class="form-group">
+        <label class="radio-inline">
+      <input type="radio" name="pgender" vale="male">Male
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="pgender" value="female">Female
+    </label>
+   </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
