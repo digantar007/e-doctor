@@ -16,6 +16,112 @@
 </form>
  -->
 
+
+
+<div class="container">
+  <div class="row">
+        <div class="span12">
+        <div class="" id="loginModal">
+              <div class="modal-header">
+               
+                <h3>Have an Account?</h3>
+              </div>
+              <div class="modal-body">
+                <div class="well">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                    <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                  </ul>
+                  <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active in" id="login">
+                      <form class="form-horizontal" action="/patient/login" method="POST">
+                        <fieldset>
+                          <div id="legend">
+                            <legend class="">Login</legend>
+                          </div>    
+                          <div class="control-group">
+                            
+                            <label class="control-label"  for="username">Username</label>
+                            <div class="form-group">
+                              <input type="text" id="username" name="pname" placeholder="Enter Patient Username" class="form-control">
+                            </div>
+                          </div>
+     
+                          <div class="control-group">
+                          
+                            <label class="control-label" for="password">Password</label>
+                            <div class="form-group">
+                              <input type="password" id="password" name="patientPassword" placeholder="Enter Patient Password" class="form-control">
+                            </div>
+                          </div>
+     
+     
+                          <div class="control-group">
+                            
+                            <div class="form-group">
+                              <button class="btn btn-success">Login</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>                
+                    </div>
+                    <div class="tab-pane fade" id="create">
+                      <form id="tab" action="/patient" method="post">
+                        <div class="form-group">
+                        <label>Patientname:</label>
+                        <input type="text" value="" class="form-control" name="pname" placeholder="Enter Patient Name">
+                      </div>
+                      <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" value="" class="form-control" class="patientPassword" placeholder="Enter Password">
+                      </div>
+                      <div class="form-group">
+                        <label>ConfirmPassword:</label>
+                        <input type="text" value="" class="form-control" class="cpatientPassword" placeholder="Re-Enter Your Password">
+                      </div>
+                      <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" value="" class="form-control" class="pemail" placeholder="Enter Email">
+                      </div>
+                      <div class="form-group">
+                        <label>Mobile no.:</label>
+                        <input type="text" value="" class="form-control" class="pmobile" placeholder="Enter Mobile No.">
+                      </div>
+                      <div class="form-group">
+                        <label>Age:</label>
+                        <input type="text" value="" class="form-control" class="age" placeholder="Enter Your Age">
+                      </div>
+                        <div class="form-group">
+                         <label>Disease:</label>
+                                 
+                         <input type="disease" class="form-control" id="disease" placeholder="Disease Name" name="disease" list="browsers" >
+                          <datalist id="browsers">
+                            <option value="Malaria">
+                            <option value="Dengue">
+                            <option value="Typhoid">
+                            <option value="Fever">
+                            <option value="Safari">
+                            </datalist>
+                             
+                            </div>
+                          <div class="form-group">
+                          <button class="btn btn-primary">Create Account</button>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div> 
+
+
+
+
+
+
+<!--
 <div class="container">
   <h2>Register</h2>
   <form class="form-horizontal" action="/patient" method="POST">
@@ -72,3 +178,4 @@
     </div>
   </form>
 </div>
+-->

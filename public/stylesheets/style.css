@@ -1,4 +1,19 @@
-
+#tab{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#loginModal{
+	padding-left: 200px;
+	padding-right: 200px;
+}
+#well{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#myTabContent{
+	    padding-left: 35px;
+    padding-right: 35px;
+}
 
 a {
 	color: #00B7FF;
