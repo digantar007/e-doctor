@@ -7,6 +7,16 @@ router.get('/', function(req, res, next) {
 });
 
 
+router.post('/bookAppointment', function(req, res, next) {
+    console.log(req.body)
+    var dateTime = req.body.dateTime;
+    console.log(dateTime)
+    res.render('patientlist',{
+        "doctorlist" : docs
+    });
+});
+
+
 router.post('/login',function(req,res,next){
 
     console.log(req.body)
@@ -20,7 +30,6 @@ router.post('/login',function(req,res,next){
         res.render('patientlist', {
             "doctorList" : docs
         });
-         console.log('here is the patient',docs);
     });
      // collection.find({
     //     "p_name" : patientName,
@@ -52,6 +61,7 @@ router.post('/', function(req, res) {
     var patientMobile =req.body.pmobile;
     var password = req.body.patientPassword;
     var cpassword = req.body.cpatientPassword;
+    var email = req.body.pemail;
 
     // Set our collection
     var collection = db.get('patient');
@@ -75,8 +85,8 @@ router.post('/', function(req, res) {
     });
 });
 
-router.get('/registerPatient', function(req, res) {
-    res.render('newpatient', { title: 'Add New Patient' });
+router.get('/appoint', function(req, res) {
+    res.render('appoint', { title: 'Add New Patient' });
 });
 
 
@@ -110,6 +120,10 @@ router.post('/addp', function(req, res) {
         }
     });
 });
+
+
+
+
 
 
 /* GET Userlist page. */
