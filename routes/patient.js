@@ -11,8 +11,15 @@ router.post('/bookAppointment', function(req, res, next) {
     console.log(req.body)
     var dateTime = req.body.dateTime;
     console.log(dateTime)
-    res.render('patientlist',{
-        "doctorlist" : docs
+    var db = req.db;
+    console.log("here is doctor")
+    // Get our form values. These rely on the "name" attributes
+    var collection = db.get('doctor');
+    collection.find({},{},function(e,docs){
+        console.log('here is the login');
+        res.render('patientlist', {
+            "doctorlist" : docs
+        });
     });
 });
 
@@ -24,11 +31,11 @@ router.post('/login',function(req,res,next){
     var db = req.db;
     console.log("here is doctor")
     // Get our form values. These rely on the "name" attributes
-    var collection = db.get('patient');
+    var collection = db.get('doctor');
     collection.find({},{},function(e,docs){
         console.log('here is the login');
-        res.render('doctorDashboard', {
-            "patientList" : docs
+        res.render('patientlist', {
+            "doctorlist" : docs
         });
     });
      // collection.find({
