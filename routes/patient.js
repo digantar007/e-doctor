@@ -69,6 +69,7 @@ router.post('/', function(req, res) {
     var password = req.body.patientPassword;
     var cpassword = req.body.cpatientPassword;
     var email = req.body.pemail;
+    var disease = req.body.disease;
 
     // Set our collection
     var collection = db.get('patient');
@@ -79,7 +80,9 @@ router.post('/', function(req, res) {
         "age" : patientAge,
         "mobile":patientMobile,
         "password" : password,
-        "cpassword" : cpassword
+        "cpassword" : cpassword,
+        "disease" : disease,
+        "email" : email
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
