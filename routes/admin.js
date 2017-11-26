@@ -2,9 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('admin',{title:'admin Module from route'});
-});
+
 
 router.get('/addpatient', function(req, res) {
     res.render('newpatient', { title: 'Add New Patient' });
@@ -12,6 +10,19 @@ router.get('/addpatient', function(req, res) {
 
 /* POST to Add User Service */
 router.post('/addp', function(req, res) {
+  res.render('admin',{title:'Patient Module'});
+});
+
+router.get('/viewPatient', function(req, res) {
+    res.render('viewPatient', { title: 'Add New Patient' });
+});
+router.get('/viewDoctor', function(req, res) {
+    res.render('viewDoctor', { title: 'Add New Patient' });
+});
+
+/* POST to Add User Service */
+router.post('/', function(req, res) {
+
 
     // Set our internal DB variable
     var db = req.db;
