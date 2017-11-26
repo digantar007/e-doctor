@@ -1,6 +1,21 @@
-<h2>hello patient</h2>
-<h3>
+<div class="container">
+	<div class="row">
+		<h2>Welcome to ADC</h2>
+		<div class="form-group" >
+			<div class="col-sm-3 pull-right" >
+				<input class="form-control" placeholder="Search doctor" name="searchDoctor" list="searchDoctor" >
+				<datalist id="searchDoctor">
+					{{#each  doctorList}}
+						<option value="{{Name}}">{{Speciality}}</option>
+					{{/each}}
+				</datalist>	
+			</div>         
+		</div>
+	</div>
+</div>
+
+<!-- <h3>
   {{#each  patientlist}}
     <a href="#"> {{p_name}}</a>
   {{/each}}
-</h3>
+</h3> -->
