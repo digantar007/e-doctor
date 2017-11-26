@@ -21,6 +21,12 @@ footer {
 	margin: auto;
 }
 
+.footer{
+	position: fixed;
+    height: 100px;
+    bottom: 0px;
+    width: 100%;
+}
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {
 	.carousel-caption {
