@@ -7,16 +7,16 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   console.log(req.body)
     var db = req.db;
     console.log("here is doctor")
     // Get our form values. These rely on the "name" attributes
-    var collection = db.get('doctor');
+    var collection = db.get('patient');
     collection.find({},{},function(e,docs){
         console.log('here is the login');
-        res.render('patientlist', {
-            "doctorList" : docs
+        res.render('doctorDashboard', {
+            "patientlist" : docs
         });
          console.log('here is the patient',docs);
     });
