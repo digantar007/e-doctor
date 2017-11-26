@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res) {
-    res.render('loginPatient', { title: 'Add New Patient' });
+    res.render('viewPatient', { title: 'Add New Patient' });
 });
 
 
