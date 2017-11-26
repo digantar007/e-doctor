@@ -71,7 +71,7 @@ router.post('/', function(req, res) {
         }
         else {
             // And forward to success page
-            res.render('loginPatient', { title: 'Login Patient' });
+            res.render('patient', { title: 'Login Patient' });
         }
     });
 });
