@@ -14,11 +14,11 @@ router.post('/login',function(req,res,next){
     var db = req.db;
     console.log("here is doctor")
     // Get our form values. These rely on the "name" attributes
-    var collection = db.get('doctor');
+    var collection = db.get('patient');
     collection.find({},{},function(e,docs){
         console.log('here is the login');
-        res.render('patientlist', {
-            "doctorList" : docs
+        res.render('doctorDashboard', {
+            "patientList" : docs
         });
          console.log('here is the patient',docs);
     });

@@ -7,19 +7,29 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   console.log(req.body)
     var db = req.db;
-    console.log("here is doctor")
-    // Get our form values. These rely on the "name" attributes
-    var collection = db.get('doctor');
-    collection.find({},{},function(e,docs){
-        console.log('here is the login');
-        res.render('patientlist', {
-            "doctorList" : docs
-        });
-         console.log('here is the patient',docs);
-    });
+    var doctorName = req.body.dname;
+    var doctorPassword = req.body.doctorPassword;
+    console.log("doctor name:",doctorName)
+    console.log("my password",doctorPassword)
+    if (doctorName == 'shiva' && doctorPassword == 'shiva') 
+    	{
+    		var collection = db.get('patient');
+		    collection.find({},{},function(e,docs){
+		        res.render('doctorDashboard', {
+		            "patientlist" : docs,
+		            "doctorName" : doctorName
+		        });
+		    });
+
+    	} else {
+    		res.render('error.hbs' , {message : 'Your id or password is not correct'})
+
+    	}
+ 
+    
 });
 
 
