@@ -10,7 +10,7 @@ var $ = require("jquery");
 // New Code
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/adc');
+var db = monk('192.168.0.10:27017/adc');
 
 
 var index = require('./routes/index');

@@ -1,1 +1,23 @@
-<h3>started</h3>
+<div class="container">
+  <h2>Login</h2>
+  <form class="form-horizontal" action="/doctor/login" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="dname">Username:</label>
+      <div class="col-sm-10">
+        <input type="dname" class="form-control" id="dname" placeholder="Enter dname" name="dname">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="doctorPassword">Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="doctorPassword" placeholder="Enter password" name="doctorPassword">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
